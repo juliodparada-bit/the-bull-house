@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+:root {
+  --black: #0d0d0d;
+  --charcoal: #2e2e2e;
+  --brown: #764b36;
+  --brown-deep: #5c3a29;
+  --brown-soft: #8a5e47;
+  --cream: #efe7dd;
+  --cream-deep: #e4d9cb;
+  --sand: #dfd2c7;
+  --white: #ffffff;
+  --ink: #2a211c;
+  --muted: #6b635c;
+  --panel: #cfc9c2;
+  --panel-soft: #ddd8d1;
+}
+
+@theme inline {
+  --color-black: var(--black);
+  --color-charcoal: var(--charcoal);
+  --color-brown: var(--brown);
+  --color-brown-deep: var(--brown-deep);
+  --color-brown-soft: var(--brown-soft);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-sand: var(--sand);
+  --color-white: var(--white);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-panel: var(--panel);
+  --color-panel-soft: var(--panel-soft);
+  --font-display: var(--font-display);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--brown);
+  color: var(--cream);
+}
+
+.font-display {
+  font-family: var(--font-display), Impact, sans-serif;
+}
+
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Home portal bands */
+.band {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 28vh;
+  padding: 2.5rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.35s ease, transform 0.45s ease;
+}
+
+@media (min-width: 768px) {
+  .band {
+    min-height: 25vh;
+    padding: 3rem 2rem;
+  }
+}
+
+.band:hover {
+  filter: brightness(1.03);
+}
+
+.band-title-display {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 0.95;
+  font-size: clamp(2.4rem, 8vw, 5.5rem);
+}
+
+.band-title-serif {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+}
+
+.band-sub {
+  margin-top: 0.85rem;
+  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.band-sub-brand {
+  margin-top: 1.1rem;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: clamp(1rem, 2.6vw, 1.45rem);
+  font-weight: 800;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--cream);
+  text-shadow: 0 0 24px rgba(239, 231, 221, 0.25);
+}
+
+/* Inner page chrome */
+.page-header-brown {
+  background: var(--brown);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1.25rem 2.5rem;
+  text-align: center;
+}
+
+.page-header-cream {
+  background: var(--cream);
+  color: var(--brown-deep);
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1.25rem 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(118, 75, 54, 0.15);
+}
+
+.page-header-black {
+  background: var(--black);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+  padding: 3.5rem 1.25rem 2.5rem;
+  text-align: center;
+}
+
+.pill-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.65rem 1.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.panel-box {
+  background: var(--panel-soft);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+
+.btn-brown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--brown);
+  color: var(--cream);
+  border: 1.5px solid var(--cream);
+  border-radius: 0.65rem;
+  padding: 0.95rem 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-brown:hover {
+  background: var(--brown-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(92, 58, 41, 0.25);
+}
+
+.btn-cream {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--cream);
+  color: var(--brown-deep);
+  border: 2px solid var(--brown-deep);
+  border-radius: 0.65rem;
+  padding: 0.95rem 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.btn-cream:hover {
+  background: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-brown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--brown-deep);
+  border: 2px solid var(--brown-deep);
+  border-radius: 0.65rem;
+  padding: 0.95rem 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.btn-outline-brown:hover {
+  background: var(--brown);
+  color: var(--cream);
+}
+
+.card-service {
+  background: var(--cream);
+  border: 2px solid var(--brown-deep);
+  border-radius: 0.85rem;
+  color: var(--brown-deep);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card-service:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(42, 33, 28, 0.12);
+  background: var(--white);
+}
+
+.input-field {
+  width: 100%;
+  background: var(--white);
+  border: 1.5px solid rgba(118, 75, 54, 0.25);
+  border-radius: 0.75rem;
+  color: var(--ink);
+  padding: 0.9rem 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field:focus {
+  border-color: var(--brown);
+  box-shadow: 0 0 0 3px rgba(118, 75, 54, 0.15);
+}
+
+.watermark-pattern {
+  background-image: repeating-linear-gradient(
+    -18deg,
+    transparent,
+    transparent 40px,
+    rgba(0, 0, 0, 0.035) 40px,
+    rgba(0, 0, 0, 0.035) 80px
+  );
+}

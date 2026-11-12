@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="96" stroke="#c9a56a" stroke-width="4" fill="#3d2a20"/>
+  <circle cx="100" cy="100" r="84" stroke="#efe7dd" stroke-width="1.5" opacity="0.35"/>
+  <path d="M100 28 A72 72 0 0 1 168 78" stroke="#c9a56a" stroke-width="2" fill="none"/>
+  <path id="topArc" d="M42,86 A68,68 0 0 1 158,86" fill="none"/>
+  <text fill="#c9a56a" font-family="Georgia, serif" font-size="13" letter-spacing="3" font-weight="700">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">THE BULL HOUSE</textPath>
+  </text>
+  <!-- horns -->
+  <path d="M58 118 C48 88, 62 62, 78 78 C70 96, 72 110, 78 122 Z" fill="#c9a56a"/>
+  <path d="M142 118 C152 88, 138 62, 122 78 C130 96, 128 110, 122 122 Z" fill="#c9a56a"/>
+  <!-- barber pole -->
+  <rect x="92" y="78" width="16" height="52" rx="3" fill="#efe7dd"/>
+  <path d="M92 86 H108 M92 94 H108 M92 102 H108 M92 110 H108 M92 118 H108" stroke="#b33a3a" stroke-width="3"/>
+  <path d="M92 90 H108 M92 98 H108 M92 106 H108 M92 114 H108" stroke="#2f5f9f" stroke-width="2.5"/>
+  <circle cx="100" cy="74" r="5" fill="#c9a56a"/>
+  <circle cx="100" cy="134" r="4" fill="#c9a56a"/>
+</svg>
